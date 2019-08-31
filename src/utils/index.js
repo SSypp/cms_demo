@@ -1,4 +1,6 @@
-
+import React from 'react';
+import { Select } from 'antd';
+const Option = Select.Option;
 export default {
     //时间处理
     formarteDate: function () {
@@ -33,5 +35,16 @@ export default {
             showQuickJumper: true
         }
         return page;
+    },
+    //Option封装
+    getOptionList(data){
+        if(!data){
+            return [];
+        }
+        let options = [];
+        data.map((item)=>{
+            options.push(<Option value={item.id} key={item.id}>{item.name}</Option>)
+        })
+        return options;
     }
 }

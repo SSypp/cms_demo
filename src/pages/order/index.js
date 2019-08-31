@@ -17,29 +17,29 @@ class Order extends React.Component{
     componentDidMount(){
         this.request();
     }
-    formList = [
-        {
-            type:'SELECT',
-            label:'城市',
-            field:'city',
-            placeholder:'全部',
-            initialValue:'1',
-            width:80,
-            list: [{ id: '0', name: '全部' }, { id: '1', name: '北京' }, { id: '2', name: '上海' }, { id: '3', name: '深圳' },{id:'4',name:'广州'}]
-        },
-        {
-            type: '时间查询'
-        },
-        {
-            type: 'SELECT',
-            label: '订单状态',
-            field:'order_status',
-            placeholder: '全部',
-            initialValue: '1',
-            width: 80,
-            list: [{ id: '0', name: '全部' }, { id: '1', name: '进行中' }, { id: '2', name: '已结束' }]
-        }
-    ]
+    // formList = [
+    //     {
+    //         type:'SELECT',
+    //         label:'城市',
+    //         field:'city',
+    //         placeholder:'全部',
+    //         initialValue:'1',
+    //         width:80,
+    //         list: [{ id: '0', name: '全部' }, { id: '1', name: '北京' }, { id: '2', name: '上海' }, { id: '3', name: '深圳' },{id:'4',name:'广州'}]
+    //     },
+    //     {
+    //         type: '时间查询'
+    //     },
+    //     {
+    //         type: 'SELECT',
+    //         label: '订单状态',
+    //         field:'order_status',
+    //         placeholder: '全部',
+    //         initialValue: '1',
+    //         width: 80,
+    //         list: [{ id: '0', name: '全部' }, { id: '1', name: '进行中' }, { id: '2', name: '已结束' }]
+    //     }
+    // ]
    handleFilter = (params)=>{
         this.params = params;
         this.request();
@@ -201,7 +201,7 @@ class Order extends React.Component{
         return (
             <div>
                 <Card title='订单管理' className='Card'>
-                    <FilterForm formList={this.formList} filterSubmit={this.handleFilter} />
+                    <FilterForm filterSubmit={this.handleFilter} />
                 </Card>
                 <Card>
                     <Button type="primary" onClick={this.openOrderDetail}>订单详情</Button>
