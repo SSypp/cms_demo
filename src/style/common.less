@@ -1,0 +1,45 @@
+@import './loading.less';
+
+ul li{
+    list-style: none;
+}
+.container{
+    display: flex;
+    .nav-left{
+        background-color: darkcyan;
+        height: calc(100vh);
+    }
+    .main{
+        display: 1;
+        height: calc(100vh);
+        background-color: #f1f3f5;
+        overflow: auto;
+    }
+    .conment{
+        padding:20px;
+    }
+}
+
+//城市管理样式
+.content-wrap{
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    margin-top: -3px;
+    .ant-table-wrapper{
+        margin-left: -1px;
+        margin-right: -1px;
+    }
+}
+
+.content{
+    padding:30px;
+}
+
+.clearfix{
+    &::after{
+        content:' ';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
